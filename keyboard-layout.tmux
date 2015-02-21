@@ -5,11 +5,11 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/scripts/shared.sh"
 
 keyboard_layout="#($CURRENT_DIR/scripts/keyboard_layout.sh)"
-keyboard_layout_interpolation="\#{keyboard_layout}"
+keyboard_layout_interpolation_string="\#{keyboard_layout}"
 
 do_interpolation() {
 	local string=$1
-	local interpolated=${string/$keyboard_layout_interpolation/$keyboard_layout}
+	local interpolated=${string/$keyboard_layout_interpolation_string/$keyboard_layout}
 	echo "$interpolated"
 }
 
