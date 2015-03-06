@@ -10,7 +10,7 @@ print_keyboard_layout() {
 	elif [ command_exists "setxkbmap" ]; then
         setxkbmap -print | awk -F"+" '/xkb_symbols/ {print $2}'
     else
-        echo "123"
+        echo "Mac or Linux supported"
 	fi
 }
 
